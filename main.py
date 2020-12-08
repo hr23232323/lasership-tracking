@@ -14,16 +14,16 @@ def main():
 
             # Status of most recent event in API res
             curStatus = resJson["Events"][0]["EventLabel"]
-
-            # Timestamp for tracking
-            t = time.localtime()
-            curTime = time.strftime("%H:%M:%S", t)
-
-            # Print TS and status so user is aware of running program
-            print(curTime + " : " + curStatus)
         except:
-            print("Error with API, will sleep and proceed")
-            
+            curStatus = "Error with API, will sleep and proceed"
+        
+        # Timestamp for tracking
+        t = time.localtime()
+        curTime = time.strftime("%H:%M:%S", t)
+
+        # Print TS and status so user is aware of running program
+        print(curTime + " : " + curStatus)
+
         # If out for delivery, sleep for 30s, otherwise break
         if(curStatus == "Delivered"):
             break
