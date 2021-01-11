@@ -3,7 +3,7 @@ import json, time, os
 
 def main():
     # Replace with your own tracking number
-    trackingNum = "1LS7306077308792-1"
+    trackingNum = "1LS7306078138214-1"
 
     # Loop runs while item is not delivered
     while True:
